@@ -5,9 +5,7 @@ def cleanData(data_B,minDate,maxDate):
     data_B = data_B[(data_B[" Q_FG"]==0)]
     data_B = data_B[(data_B["    DATE"]>=minDate)]
     data_B = data_B[(data_B["    DATE"]<=maxDate)]
-
     return data_B
-
 
 # open and read data
 data_E = pd.read_csv("../database/Elsenborn.csv", sep = ',')
