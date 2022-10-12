@@ -10,13 +10,11 @@ def cleanData(data_B,minDate,maxDate):
 
 
 # open and read data
-data_E = pd.read_csv("database/Elsenborn.csv", sep = ',')
-data_B = pd.read_csv("database/Beauvechain.csv", sep = ',')
+data_E = pd.read_csv("../database/Elsenborn.csv", sep = ',')
+data_B = pd.read_csv("../database/Beauvechain.csv", sep = ',')
 
 minDate = 20170101
 maxDate = 20210101
 
 # sort the database to remove wrong data
 data_B = cleanData(data_B,minDate,maxDate)
-
-testcleanData(data_B,minDate,maxDate)
