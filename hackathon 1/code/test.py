@@ -1,14 +1,8 @@
-from hackathon import *
+import pandas as pd
+import numpy as np
 
-def cleanData(data_B,minDate,maxDate):
-
-    err = data_B[(data_B[" Q_FG"] != 0)]
-    err += data_B[(data_B["    DATE"]<minDate)]
-    err += data_B[(data_B["    DATE"]>maxDate)]
-
-    print("erreur tri database = " + str(len(err)))
-
-def allTest(data_B,minDate,maxDate):
-    cleanData(data_B,minDate,maxDate)
-    
-allTest(data_B,minDate,maxDate)
+df = pd.DataFrame({
+    'length': [1.5, 0.5, 1.2, 0.9, 3],
+    'width': [0.7, 0.2, 0.15, 0.2, 1.1]
+}, index=['pig', 'rabbit', 'duck', 'chicken', 'horse'])
+hist = df.hist(bins=3)
